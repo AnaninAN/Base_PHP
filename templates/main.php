@@ -9,7 +9,7 @@ require './public/main.php';
     <div class="catalog">
         <?php foreach ($images as $image) : ?>
             <div class="poster">
-                <a class="bigImg" href="./one-img.php?id=<?=$image['id']?>&views=<?=$image['views']?>">
+                <a class="bigImg" href="./one-img.php?id=<?=$image['id']?>">
                     <img src="<?=$image['path_small']?>" alt="<?=$image['name']?>">
                 </a>
             </div>
