@@ -16,6 +16,9 @@ if ($_POST) {
         case 'C':
             $_SESSION = [];
             break;
+        case 'Back':
+            $rez = '-1';
+            break;
         case '+':
             if($_SESSION['do'] == ''){
                 $_SESSION['do'] = "+";
@@ -81,13 +84,16 @@ if ($_POST) {
         case 9:
             $rez ='9';
             break;                
-         
     }
     if($_SESSION['do']) {
         $_SESSION['i']++;       
     }
     
-    $_SESSION['x'.$_SESSION['i']] = $_SESSION['x'.$_SESSION['i']].$rez;
+    if ($rez !== '-1') {
+        $_SESSION['x'.$_SESSION['i']] = $_SESSION['x'.$_SESSION['i']].$rez;
+    } else {
+        $_SESSION['x'.$_SESSION['i']] = substr($_SESSION['x'.$_SESSION['i']], 0, strlen($_SESSION['x'.$_SESSION['i']]) - 1);
+    }
 }
 
 function rezult(){
