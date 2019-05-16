@@ -25,8 +25,8 @@ return [
         '-' => 'minus' 
     ],
     [
-        '0' => 'b0',
         '.' => 'separator',
+        '0' => 'b0',
         '=' => 'equally'
     ]
 ];
